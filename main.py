@@ -25,6 +25,7 @@ STRING_SESSION = os.environ["STRING_SESSION"]
 
 VIDEO_POST_URL = "https://t.me/HARSHUREQASSETS/4"
 APK_POST_URL = "https://t.me/HARSHUREQASSETS/14"
+AUDIO_POST_URL = "https://t.me/HARSHUREQASSETS/15"
 
 # Sent first by the account logged in through STRING_SESSION.
 INTRO_MESSAGE = (
@@ -397,6 +398,16 @@ async def send_sequence(user_id: int, target):
             if apk_caption_entities:
                 apk_payload["caption_entities"] = apk_caption_entities
         await send_from_bot("copyMessage", apk_payload, "APK message")
+
+        # 4) Bot copies the audio post after the username intro message's
+        # corresponding bot messages have been sent.
+        audio_chat, audio_message_id = parse_telegram_post_url(AUDIO_POST_URL)
+        audio_payload = {
+            "chat_id": user_id,
+            "from_chat_id": audio_chat,
+            "message_id": audio_message_id,
+        }
+        await send_from_bot("copyMessage", audio_payload, "audio message")
 
         bot_messages_sent = True
         log.info("BOT MESSAGE SEQUENCE COMPLETE for user_id=%s", user_id)
