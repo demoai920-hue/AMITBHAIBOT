@@ -53,7 +53,7 @@ APK_BUTTONS = {
     "inline_keyboard": [
         [{
             "text": "DM FOR LOSS RECOVERY",
-            "url": "https://t.me/m/V35Ci6DOYjY1",
+            "url": "https://t.me/m/KoS8I2j_Zjll",
             "icon_custom_emoji_id": "5465476962266934316",
             "style": "danger",
         }],
