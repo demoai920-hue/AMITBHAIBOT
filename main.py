@@ -58,7 +58,7 @@ APK_BUTTONS = {
         }],
         [{
             "text": "REGISTRATION LINK",
-            "url": "https://www.dmplay20.com/#/register?invitationCode=841531119445",
+            "url": "https://www.dmplay20.com/#/register?invitationCode=183511218677",
             "icon_custom_emoji_id": "5231200819986047254",
             "style": "success",
         }],
